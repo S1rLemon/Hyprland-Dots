@@ -1,0 +1,190 @@
+* {
+    border: none;
+    border-radius: 0px;
+    min-height: 0px;
+    margin: 0rem 0rem 0rem 0rem;
+    font-family: "JetBrains Mono Nerd Font";
+    transition: background-color 0.3s ease-out;
+    font-weight: 900;
+    font-size: 12px;
+}
+
+window#waybar {
+    background-color: transparent;
+}
+
+#waybar>box { 
+    margin: 2px 17px 5px 8px;
+    padding: 2px 0px 2px 0px;
+    border-radius: 5px;
+    border: 4px ridge #363636;
+    background-color: #0c0b0c;
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9),
+             2px 2px 4px rgba(0, 0, 0, 0.6),
+             3px 3px 6px rgba(0, 0, 0, 0.4),
+             4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+window#waybar.empty #mpris {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.modules-left {
+    margin-left: 5px;
+}
+
+.modules-right {
+    margin-right: 5px;
+}
+
+#workspaces {
+    background-color: #0c0b0c;
+    margin: 0px 0px 0px 0px;
+    transition: 0.1s ease-in-out;
+    padding: 0px 0px;
+}
+
+#workspaces button {
+    all: initial;
+    padding: 0px 9px;
+    margin: 0px 1px;
+    color: #df6124;
+    opacity: 1;
+    font-weight: 900;
+    font-size: 12px;
+    border-radius: 2px;
+}
+
+#workspaces button.active {
+    color: #0c0b0c;
+    border-radius: 2px;
+    background-color: #df6124;
+    padding: 0px 9px;
+    margin: 0px 1px;
+    opacity: 1.0
+}
+
+#workspaces button.empty:hover,
+#workspaces button:hover {
+    background: transparent;
+    color: #FAFCFB;
+    transition: all 150ms ease;
+    opacity: 1;
+}
+
+#workspaces button.empty {
+    opacity: 1;
+    border-radius: 2px;
+    padding: 0px 9px;
+    margin: 0px 1px;
+    color: alpha(#FAFCFB, 0.25);
+}
+
+#workspaces button.empty.active {
+    opacity: 1;
+    border-radius: 2px;
+    padding: 0px 9px;
+    margin: 0px 1px;
+    background-color: alpha(#FAFCFB, 0.5);
+    color: #0c0b0c
+}
+
+#memory,
+/* change mpris to cava */
+#mpris,
+#custom-expand-icon,
+#tray,
+#cpu,
+#custom-clock,
+#pulseaudio,
+#idle_inhibitor,
+#custom-updatespacman {
+    min-width: 12px;
+    padding: 1px 8px 1px 8px;
+    margin: 0px 0px 0px 0px;
+    opacity: 1;
+    color: #FAFCFB;
+}
+
+#custom-updatespacman {
+    opacity: 1;
+}
+
+#tray {
+    padding-top: 2px;
+    padding-left: 4px;
+    padding-right: 2px;
+}
+
+#idle_inhibitor.deactivated {
+    opacity: 0.5;
+}
+
+#idle_inhibitor.activated {
+    opacity: 1;
+}
+
+#custom-separator6,
+#custom-separator5,
+#custom-separator4,
+#custom-separator3,
+#custom-separator2,
+#custom-separator {
+    opacity: 0.2;
+    padding-top: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 14px;
+    color: #FAFCFB;
+}
+
+tooltip {
+    padding: 2px;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+tooltip {
+    padding: 4px;
+    background: #0c0b0c;
+    font-size: 10px;
+    border: 1.5px solid alpha(#FAFCFB, 0.6);
+    border-radius: 8px;
+}
+
+tooltip label {
+    /* padding: 6px; */
+    color: alpha(#FAFCFB, 0.65);
+    font-weight: normal;
+}
+
+#mpris {
+    opacity: 1;
+    color: #FAFCFB;
+    animation: repeat;
+    animation-name: blink;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+#pulseaudio.warning,
+#memory.warning,
+#cpu.warning {
+    color: #e3c1b1;
+    background-color: #0c0b0c;
+}
+
+#pulseaudio.critical,
+#memory.critical,
+#cpu.critical {
+    color: #df6124;
+    background-color: #0c0b0c;
+}
